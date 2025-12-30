@@ -141,10 +141,18 @@ ON p.codigo_fabricante = f.codigo
 WHERE f.nombre = 'Asus' OR f.nombre = 'Hewlett-Packard' OR f.nombre = 'Seagate';
 
 -- 29. Retorna un llistat amb nom, preu i nom del fabricant (fabricante) de tots els productes dels fabricants Asus, Hewlett-Packard i Seagate. Fent servir l'operador IN.
-
+SELECT p.nombre, p.precio, f.nombre AS fabricante 
+FROM producto p 
+JOIN fabricante f 
+ON p.codigo_fabricante = f.codigo 
+WHERE f.nombre IN ('Asus', 'Hewlett-Packard','Seagate');
 
 -- 30. Retorna un llistat amb el nom, el preu i el nom del fabricant (fabricante) dels productes, on el nom del fabricant acabi en la lletra 'e'.
-
+SELECT p.nombre, p.precio, f.nombre AS fabricante 
+FROM producto p 
+JOIN fabricante f 
+ON p.codigo_fabricante = f.codigo
+WHERE RIGHT(f.nombre,1) = 'e';
 
 -- 31. Retorna un llistat amb el nom del producte, el seu preu i el nom del fabricant (fabricante), per a tots aquells productes els fabricants dels quals contenen la lletra 'w' en el seu nom.
 
