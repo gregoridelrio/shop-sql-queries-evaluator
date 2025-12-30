@@ -43,10 +43,14 @@ SELECT DISTINCT codigo_fabricante
 from producto;
 
 -- 13. Llista els noms dels fabricants ordenats de manera ascendent
-
+SELECT nombre
+FROM fabricante
+ORDER BY nombre ASC;
 
 -- 14. Llista els noms dels fabricants ordenats de manera descendent
-
+SELECT nombre
+FROM fabricante
+ORDER BY nombre DESC;
 
 -- 15. Llista els noms i els preus dels productes ordenats, en primer lloc, pel nom de manera ascendent i, en segon lloc, pel preu de manera descendent.
 
