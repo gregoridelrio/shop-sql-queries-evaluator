@@ -189,7 +189,7 @@ ON f.codigo = p.codigo_fabricante
 WHERE p.codigo_fabricante IS NULL;
 
 -- 36. Retorna tots els productes del fabricant Lenovo. (Sense utilitzar INNER JOIN).
-SELECT codigo, nombre, precio
+SELECT codigo, nombre, precio, codigo_fabricante
 FROM producto
 WHERE codigo_fabricante = (
   SELECT codigo
