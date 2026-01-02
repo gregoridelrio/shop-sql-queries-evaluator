@@ -242,7 +242,7 @@ WHERE precio >= (
 );
 
 -- 41. Llista tots els productes del fabricant Asus que tenen un preu superior al preu mitjà de tots els seus productes.
-SELECT *
+SELECT codigo, nombre, precio, codigo_fabricante
 FROM producto
 WHERE precio > (
   SELECT AVG(precio)
